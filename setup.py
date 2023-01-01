@@ -8,9 +8,23 @@ setup(
     description='',
     packages=packages,
     package_dir={p: p.replace('.', '/').replace('latent_diffusion', '.') for p in packages},
+    python_requires=">=3.8",
     install_requires=[
         'torch',
+        'opencv-python',
+        'albumentations',
+        'Pillow',
         'numpy',
+        'torchvision',
+        'omegaconf',
+        'taming-transformers @ git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers',
         'tqdm',
+        'pytorch-lightning',
+        'einops',
+        'natsort',
+        'clip @ git+https://github.com/openai/CLIP.git@main#egg=clip',
+        'kornia',
+        'scipy',
+        'scann'
     ],
 )
